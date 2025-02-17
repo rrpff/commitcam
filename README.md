@@ -2,6 +2,10 @@
 
 Basically lolcommits but in a 6 line shell script, for macOS only
 
+## Usage
+
+Will take a picture of you every time you create a commit and save it as `~/.commitcam/$PROJECT_NAME/$SHA.jpg`
+
 ## Installation
 
 1. Install dependencies
