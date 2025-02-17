@@ -1,6 +1,10 @@
 #!/bin/sh
 
-PROJECT=$(basename $(pwd))
-OUTDIR=~/.commitcam/$PROJECT
+PROJECT=$(basename $(git rev-parse --show-toplevel))
+SHA=$(git rev-parse HEAD)
 
-echo $OUTDIR
+OUTDIR=~/.commitcam/$PROJECT
+OUTFILE=$OUTDIR/$SHA.jpg
+
+mkdir -p $OUTDIR
+imagesnap $OUTFILE > /dev/null 2>&1
