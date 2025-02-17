@@ -7,4 +7,4 @@ OUTDIR=~/.commitcam/$PROJECT
 OUTFILE=$OUTDIR/$SHA.jpg
 
 mkdir -p $OUTDIR
-imagesnap $OUTFILE > /dev/null 2>&1
+imagesnap $OUTFILE -w 0 > /dev/null 2>&1
